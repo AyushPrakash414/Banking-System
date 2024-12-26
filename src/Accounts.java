@@ -53,7 +53,27 @@ public class Accounts {
         this.connection = connection;
         this.scanner = scanner;
     }
+
     // this class have 4 Methods Open_Account,GetAccountNumber,GenerateAccountNumber,AccountExist
+    public long GetAccountNumber(String Email)
+    {
+        try
+        {
+            String query="select account_number from accounts where email=?";
+            PreparedStatement p=connection.prepareStatement(query);
+            p.setString(1,Email);
+            ResultSet r=p.executeQuery();
+            if (r.next()) { // Move the cursor to the first row
+                return r.getLong(1); // Retrieve the value from the first column
+            } else {
+                throw new RuntimeException("No account found for the provided email.");
+            }
+        }
+        catch(SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return -1;
+    }
 
     public long GenerateAccountNumber()
     {
