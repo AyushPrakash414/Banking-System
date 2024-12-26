@@ -2,8 +2,8 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class user {
-    private Connection connection;
-    private Scanner scanner;
+    private final Connection connection;
+    private final Scanner scanner;
 
     public user(Connection connection, Scanner scanner) {
         this.connection = connection;
@@ -57,14 +57,7 @@ public class user {
             PreparedStatement p=connection.prepareStatement(query);
             p.setString(1,email);;
             ResultSet rs=p.executeQuery();
-            if (rs.next())
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return rs.next();
         }
         catch(SQLException e)
         {
@@ -77,7 +70,7 @@ public class user {
     {
         System.out.print("Enter Your Email:");
         String Email=scanner.nextLine();
-        System.out.printf("Enter the password:");
+        System.out.print("Enter the password:");
         String Password=scanner.nextLine();
         String query="select * from user where email= ? and user_password= ?";
         try

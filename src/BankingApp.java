@@ -23,14 +23,8 @@ public class BankingApp {
         {
             Connection connection= DriverManager.getConnection(url,username,password);
             Scanner scanner=new Scanner(System.in);
-            user ayush= new user(connection,scanner);
-            if (ayush.User_login(connection,scanner)==null)
-            {
-                System.out.println("User Not Exist");
-            }
-            else {
-                System.out.println("User exist");
-            }
+            Accounts ayush= new Accounts(connection,scanner);
+            System.out.println(ayush.GenerateAccountNumber());
         }
         catch (SQLException e)
         {
