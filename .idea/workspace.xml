@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BankingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankingApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/user.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -95,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735126559704</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Account class operation only open Account method is remaining">
+      <option name="closed" value="true" />
+      <created>1735194300031</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735194300032</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,6 +123,7 @@
     <MESSAGE value="initilization" />
     <MESSAGE value="Add testing class" />
     <MESSAGE value="Adding user class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding user class" />
+    <MESSAGE value="Account class operation only open Account method is remaining" />
+    <option name="LAST_COMMIT_MESSAGE" value="Account class operation only open Account method is remaining" />
   </component>
 </project>

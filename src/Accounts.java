@@ -8,6 +8,47 @@ public class Accounts {
     private final Connection connection;
     private final Scanner scanner;
 
+    public long Open_Account( String Email)
+    {
+        if (!AccountExist(Email)) {
+        String Full_name, Security_pin;
+        System.out.print("Enter the Full Name:");
+        Full_name = scanner.nextLine();
+        System.out.println("Enter the Initial Amount");
+        double Amount = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.print("Enter the Security Pin:");
+        Security_pin = scanner.nextLine();
+        String query = "Insert into accounts (account_number,full_name,email,balance,password) values (?,?,?,?,?)";
+        long Account_Number = GenerateAccountNumber();
+        try {
+            PreparedStatement p = connection.prepareStatement(query);
+            p.setLong(1, Account_Number);
+            p.setString(2, Full_name);
+            p.setString(3, Email);
+            p.setDouble(4, Amount);
+            p.setString(5, Security_pin);
+            int check = p.executeUpdate();
+            if (check > 0)
+            {
+                System.out.println("Account Created Successfully!!");
+            }
+            else
+            {
+                throw new RuntimeException("Account Creation Failed!!");
+            }
+        }
+        catch (SQLException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return Account_Number;
+    }
+    else
+    {
+        throw new RuntimeException("Account Already Exist In the DataBase");
+    }
+    }
     public Accounts(Connection connection, Scanner scanner) {
         this.connection = connection;
         this.scanner = scanner;
@@ -54,6 +95,5 @@ public class Accounts {
             System.out.println(e.getMessage());
         }
         return false;
-
     }
 }

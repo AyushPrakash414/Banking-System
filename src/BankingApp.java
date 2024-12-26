@@ -24,7 +24,7 @@ public class BankingApp {
             Connection connection= DriverManager.getConnection(url,username,password);
             Scanner scanner=new Scanner(System.in);
             Accounts ayush= new Accounts(connection,scanner);
-            System.out.println(ayush.GenerateAccountNumber());
+            System.out.println(ayush.Open_Account("ghost@gmail.com"));
         }
         catch (SQLException e)
         {
