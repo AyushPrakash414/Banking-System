@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1188588e-f1b0-4438-8da3-583fe59c0161" name="Changes" comment="">
+    <list default="true" id="1188588e-f1b0-4438-8da3-583fe59c0161" name="Changes" comment="Development of Credit Method is Completed&#10;left work are validation of Security pin method and Rest Method of the AccountManger Class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Accounts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AccountsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AccountsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BankingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankingApp.java" afterDir="false" />
     </list>
@@ -122,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735209947798</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Development of Debit Method is Completed">
+      <option name="closed" value="true" />
+      <created>1735299204844</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1735299204844</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +149,8 @@
     <MESSAGE value="Adding user class" />
     <MESSAGE value="Account class operation only open Account method is remaining" />
     <MESSAGE value="Account Class Work is done!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Account Class Work is done!!" />
+    <MESSAGE value="Development of Debit Method is Completed" />
+    <MESSAGE value="Development of Credit Method is Completed&#10;left work are validation of Security pin method and Rest Method of the AccountManger Class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Development of Credit Method is Completed&#10;left work are validation of Security pin method and Rest Method of the AccountManger Class." />
   </component>
 </project>
