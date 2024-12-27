@@ -23,8 +23,8 @@ public class BankingApp {
         {
             Connection connection= DriverManager.getConnection(url,username,password);
             Scanner scanner=new Scanner(System.in);
-            Accounts ayush= new Accounts(connection,scanner);
-            System.out.println(ayush.GetAccountNumber("PrakashAyush310@gmail.com"));
+            AccountsManager Ayush=new AccountsManager(connection,scanner);
+            Ayush.Debit_Money(1);
         }
         catch (SQLException e)
         {

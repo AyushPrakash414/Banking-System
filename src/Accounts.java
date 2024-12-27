@@ -100,7 +100,7 @@ public class Accounts {
         return acc;
     }
 
-    public boolean AccountExist(String Email)
+    public  boolean AccountExist(String Email)
     {
         String query="Select * from accounts where email= ?";
         try
