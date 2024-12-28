@@ -110,4 +110,76 @@ public class AccountsManager {
         }
     }
 
+    public double GetBalance(Long Account_Number)
+    {
+        String Password;
+        System.out.println("Enter Your Security Pin:");
+        Password= scanner.nextLine();
+        if (Account_Number!=0)
+        {
+            String query="Select * from accounts where account_number= ? and password= ?";
+            try
+            {
+                PreparedStatement p=connection.prepareStatement(query);
+                p.setLong(1,Account_Number);
+                p.setString(2,Password);
+                ResultSet r=p.executeQuery();
+                if (r.next())
+                {
+                    return r.getDouble("balance");
+                }
+                else {
+                    throw new RuntimeException("Security Pin Is Wrong");
+                }
+            }
+            catch(SQLException e)
+            {
+                System.out.println(e.getMessage());
+            }
+        }
+        else
+        {
+            throw new RuntimeException("AccountNumber is Wrong");
+        }
+        return 0.0;
+    }
+    public void Transfer_Money(Long Account_Number_Sender,Long Account_Number_Receiver)
+    {
+        String Password;
+        System.out.println("Enter The Security Pin:");
+        Password=scanner.nextLine();
+        if (Account_Number_Sender!=0&&Account_Number_Receiver!=0)
+        {
+            String query="Select * from accounts where account_number= ? and password= ?";
+            String query2="Select * from accounts where account_number= ?";
+            try
+            {
+                PreparedStatement p=connection.prepareStatement(query);
+                p.setLong(1,Account_Number_Sender);
+                p.setString(2,Password);
+                ResultSet r=p.executeQuery();
+                //Checking Receiver Accounts
+                PreparedStatement p2=connection.prepareStatement(query2);
+                p2.setDouble(1,Account_Number_Receiver);
+                ResultSet r2=p.executeQuery();
+                if (r.next()&&r2.next())
+                {
+                    double Amount1,Amount2;
+                }
+                else
+                {
+                    throw new RuntimeException("!!Failed!!");
+                }
+            }
+            catch(SQLException e)
+            {
+                System.out.println(e.getMessage());
+            }
+        }
+        else
+        {
+            throw new RuntimeException("Any Account Number is wrong!!!");
+        }
+    }
+
 }

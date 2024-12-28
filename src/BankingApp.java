@@ -24,7 +24,7 @@ public class BankingApp {
             Connection connection= DriverManager.getConnection(url,username,password);
             Scanner scanner=new Scanner(System.in);
             AccountsManager Ayush=new AccountsManager(connection,scanner);
-            Ayush.Credit_Money(2312002);
+            System.out.println(Ayush.GetBalance(2312002L));
         }
         catch (SQLException e)
         {
